@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include <algorithm>
+#include <catch_amalgamated.hpp>
 
 using namespace std;
 /** @brief function to count characters from given input
@@ -46,4 +47,9 @@ int main(int argc, char** argv){
     }
 
     
+}
+TEST_CASE( "Output is computed" ) {
+    REQUIRE( countChar("Dogs") == 3 );
+    REQUIRE( countChar("CS3560") == 6 );
+    REQUIRE( countChar("Woman") == 5 );
 }
